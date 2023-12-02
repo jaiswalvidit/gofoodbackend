@@ -31,7 +31,7 @@
       },
       {
         "src": "/api/create-checkout-session",
-        "dest": "./routes/index.js"
+        "dest": "./index.js"
       }
     ]
   }

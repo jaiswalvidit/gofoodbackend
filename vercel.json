@@ -6,7 +6,19 @@
             "src":"./index.js","use": "@vercel/node"}
         
     ],
-    "routes":[{
-        "src":"/(.*)", "dest": "/"
-    }]
+    "routes": [
+        {
+          "src": "/api/(.*)",
+          "dest": "/routes/index.js"
+        },
+        {
+          "src": "/createuser",
+          "dest": "/routes/Createdata.js"
+        },
+        {
+            "src":"/loginuser",
+            "dest":"/routes/Createdata.js"
+        },
+      ]
+    }
 }

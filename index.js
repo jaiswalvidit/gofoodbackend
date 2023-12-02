@@ -12,7 +12,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.send('Hello from india');
 });
 MongoDb();
 app.use('/api/auth', require('./routes/CreateData'));

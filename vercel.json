@@ -1,24 +1,41 @@
 {
-    "version":2,
-    "name":"food-app",
-    "builds":[
-        {
-            "src":"./index.js","use": "@vercel/node"}
-        
+    "version": 2,
+    "name": "food-app",
+    "builds": [
+      {
+        "src": "./routes/index.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-        {
-          "src": "/api/(.*)",
-          "dest": "/routes/index.js"
-        },
-        {
-          "src": "/createuser",
-          "dest": "/routes/Createdata.js"
-        },
-        {
-            "src":"/loginuser",
-            "dest":"/routes/Createdata.js"
-        },
-      ]
-    }
-}
+      {
+        "src": "/api/(.*)",
+        "dest": "./routes/index.js"
+      },
+      {
+        "src": "/createuser",
+        "dest": "./routes/Createdata.js"
+      },
+      {
+        "src": "/loginuser",
+        "dest": "./routes/Createdata.js"
+      },
+      {
+        "src": "/userdata",
+        "dest": "./routes/DisplayData.js"
+      },
+      {
+        "src": "/myOrderData",
+        "dest": "./routes/OrderData.js"
+      },
+      {
+        "src": "/myUserData",
+        "dest": "./routes/OrderData.js"
+      },
+      {
+        "src": "/api/create-checkout-session",
+        "dest": "./routes/index.js"
+      }
+    ]
+  }
+  

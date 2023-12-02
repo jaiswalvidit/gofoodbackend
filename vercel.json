@@ -3,15 +3,12 @@
     "name": "food-app",
     "builds": [
       {
-        "src": "./routes/index.js",
+        "src": "./index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "./routes/index.js"
-      },
+     
       {
         "src": "/createuser",
         "dest": "./routes/Createdata.js"

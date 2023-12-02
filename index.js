@@ -6,8 +6,8 @@ const MongoDb = require('./db');
 const Order = require('./models/Orders'); 
 // const User=require("./models/User");S
 app.use(cors({
-  origin: ["https://deploy-mern-1whq.vercel.app"],
-  methods: ["POST", "GET"],
+  origin: ["https://gofoodproject.vercel.app/"],
+  methods: ["POST", "GET","PATCH"],
   credentials: true,
 }));
 app.use(express.json());

@@ -1,3 +1,4 @@
+
 {
     "version": 2,
     "builds": [
@@ -7,14 +8,11 @@
       }
     ],
     "routes": [
-      { "src": "/api/auth/(.*)", "dest": "/routes/CreateData.js" },
-      { "src": "/api/(.*)", "dest": "/routes/DisplayData.js" },
-      { "src": "/api/(.*)", "dest": "/routes/OrderData.js" },
-      { "src": "/api/create-checkout-session", "dest": "/index.js" },
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/api/(.*)", "dest": "index.js" },
+      { "src": "/(.*)", "dest": "index.js" }
     ],
     "env": {
-      "STRIPE_SECRET_KEY": "'sk_test_51NtSqvSA9hxVLxKfLgU6S1xY0iSdPnSiuAY1b3PrNgQgp6hV6NZMEQf8C8icLGmrA1m7cRhRkUM8fVA5eV38gqPn006qaMCZDC'",
+      "STRIPE_SECRET_KEY": "sk_test_51NtSqvSA9hxVLxKfLgU6S1xY0iSdPnSiuAY1b3PrNgQgp6hV6NZMEQf8C8icLGmrA1m7cRhRkUM8fVA5eV38gqPn006qaMCZDC",
       "MONGODB_URI": "mongodb+srv://pj441595:Vidit121@cluster0.w8lhgc5.mongodb.net/foodapp?retryWrites=true&w=majority"
     }
   }

@@ -1,12 +1,13 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const stripe = require('stripe')('sk_test_51NtSqvSA9hxVLxKfLgU6S1xY0iSdPnSiuAY1b3PrNgQgp6hV6NZMEQf8C8icLGmrA1m7cRhRkUM8fVA5eV38gqPn006qaMCZDC');
+const stripe = require('stripe')(process.env.stripe);
 const MongoDb = require('./db');
 const Order = require('./models/Orders'); 
-// const User=require("./models/User");S
+const User=require("./models/User");
 app.use(cors({
-  origin: ["https://gofoodproject.vercel.app/"],
+  origin: ["https://gofoodproject.vercel.app"],
   methods: ["POST", "GET","PATCH"],
   credentials: true,
 }));

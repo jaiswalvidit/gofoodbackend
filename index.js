@@ -26,7 +26,9 @@ const port = process.env.PORT || 6000;
 
 // Create a route for creating a checkout session
 app.post('/api/create-checkout-session', async (req, res) => {
+    res.send("hellp");
   try {
+
     const { products, email } = req.body;
     console.log(products);
 
